@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>DraGame</title>
+  <link rel="stylesheet" href="css.css" type="text/css">
+  <script>
+    function searchShowing() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      ul = document.getElementById("myUL");
+      filter = input.value.toUpperCase();
+      // if the input is empty hide the list
+      if(filter.trim().length < 1) {
+        ul.style.display = "none";
+        return false;
+      } else {
+        ul.style.display = "block";
+      }
+
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        // This is when you want to find words that contain the search string
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) { 
+          li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  </head>
+  <header>
+    <a href="home.html"><p href="home.html"><img src="Picture\logo.png" alt="" width="60px"><Strong> DraGame </Strong></p></a>
+  </header>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="btn btn-dark btn-lg active" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-dark btn-lg active" href="allproduct.html">Product</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="btn btn-dark btn-lg active" data-toggle="dropdown" href="#" style="text-decoration: none;" role="button" aria-expanded="false">Content</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="contact.html">Contact</a>
+                <a class="dropdown-item" href="about.html">About Us</a>
+                <a class="dropdown-item" href="privacy.html">Privacy Policy</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-dark btn-lg active" href="cart.html">Cart</a>
+            </li>
+              <div class="col-sm-8"></div>
+            <li class="nav-item dropleft">
+              
+              <a class="btn btn-dark btn-lg active" data-toggle="dropdown" href="#" style="text-decoration: none;" role="button" aria-expanded="false">Search</a>
+              <div class="dropdown-menu" id="game" name="game">
+                <form name="search">
+                  <input type="text" list="gamelist" class="input" id="myInput" onkeyup="searchShowing()" onmouseout="document.search.txt.value = ''">
+                </form>
+                <ul id="myUL">
+                  <li><a href="ps4.html">Play Station 4 / 4 Pro</a></li>    
+                  <li><a href="ps5.html">Play Station 5</a></li>
+                  <li><a href="nsl.html">Nintendo Switch Lite</a></li>
+                  <li><a href="nsv12.html">Nintendo Switch V1 / V2</a></li>
+                  <li><a href="nso.html">Nintendo Switch OLED</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5">
+        <h2> Contact Us</h2>
+        <p><h2>DraGame</h2></p>
+        <p><h5>16G, Jalan Sutera Tanjung 8/4,<br><br>
+               Taman Sutera Utama,<br><br> 
+               81300 Skudai, Johor</h5></p><br>
+      </div>
+      <div class="col-sm-5">  
+        <p><h5>Contact: +6017-755 2283 </h5></p>
+        <p><h5>Email: DraGame@gmail.com </h5></p>    
+        <p><h5>WhatsApp: https://wa.me/6017-755 2283 </h5> </p><br>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-1"></div>   
+      <div class="col-sm-5">
+        <h2> Get In Touch With Us</h2>
+          Name: <input type="text" class="form-control">
+          Phone: <input type="text" class="form-control">
+          Email: <input type="text" class="form-control">
+          Address: <input type="text" class="form-control">
+          Your enquiry: <textarea class="form-control" type="text" id=""cols="30"rows="3"></textarea><br>
+          <buttom class="btn btn-info">Submit</buttom><br><br>       
+      </div>
+      <div class="col-md-5">
+        <h2> MY Location</h2>
+        <div style="margin-top:5px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.419276445608!2d103.66567051475423!3d1.5173627988934415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da734f4e6c0915%3A0x8a9a48cbf3b20bef!2sNinjaz%20Sutera%20Johor%20Bahru!5e0!3m2!1sen!2smy!4v1650879791792!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="row" style="background-color:rgb(0, 0, 0)" >
+      <div class="col-md-4" style="margin-top:20px;"> <strong>Information</strong><br>
+        <a href="about.html">About Us</a><br> 
+        <a href="privacy.html">Privacy Policy</a>
+        <br>copyright&copy; <strong>DraGame</strong>.All Right Reserved
+      </div>
+    <div class="col-md-4" style="margin-top:20px;"> <strong>Categories</strong><br>
+      <a href="allproduct.html">All Product</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="col-md-3" style="margin-top:20px;">Follow Us
+      <a href="https://www.facebook.com"><img src="picture/facebook.jpg" width="50" alt=""></a>
+      <a href="https://wa.link/3hvii9"><img src="picture/whatsapp.jpg" width="50" alt=""></a>
+      <a href="https://www.instagram.com"><img src="picture/ig.jpg" width="50" alt=""></a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+</html>

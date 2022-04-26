@@ -1,0 +1,25 @@
+.item1 { grid-area: left; }
+.item2 { grid-area: right; }
+.item3 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'left left left right right right'
+    'left left left right right right'
+    'left left left right right right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: rgb(31, 32, 34);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgb(31, 32, 34);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+a.list-group-item{
+    background-color: rgb(24, 24, 24);
+}
